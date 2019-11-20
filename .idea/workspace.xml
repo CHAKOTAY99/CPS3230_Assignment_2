@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8db5923-63a4-4eff-ad54-2022039ae416" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/additionalFiles/chromedriver_win32/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/systemTest/ssTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ssPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +38,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -50,6 +54,112 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Cucumber java.Scenario: Add multiple products to cart">
+    <configuration name="Scenario: Add multiple products to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
+      <option name="GLUE" value="stepDefs" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="CPS3230_Assignment_2" />
+      <option name="NAME_FILTER" value="^Add multiple products to cart$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Add multiple products to cart$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Add multiple products to cart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Add product to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
+      <option name="GLUE" value="stepDefs" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="CPS3230_Assignment_2" />
+      <option name="NAME_FILTER" value="^Add product to cart$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Add product to cart$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Add product to cart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Invalid Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
+      <option name="GLUE" value="stepDefs" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="CPS3230_Assignment_2" />
+      <option name="NAME_FILTER" value="^Invalid Login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Invalid Login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Invalid Login" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Product Search" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
+      <option name="GLUE" value="stepDefs" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="CPS3230_Assignment_2" />
+      <option name="NAME_FILTER" value="^Product Search$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Product Search$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Product Search" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Valid Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
+      <option name="GLUE" value="stepDefs" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="CPS3230_Assignment_2" />
+      <option name="NAME_FILTER" value="^Valid Login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Valid Login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Valid Login" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber java.Scenario: Add multiple products to cart" />
+        <item itemvalue="Cucumber java.Scenario: Add product to cart" />
+        <item itemvalue="Cucumber java.Scenario: Product Search" />
+        <item itemvalue="Cucumber java.Scenario: Invalid Login" />
+        <item itemvalue="Cucumber java.Scenario: Valid Login" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -61,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1574151540195</updated>
       <workItem from="1574151543257" duration="3935000" />
-      <workItem from="1574232961558" duration="2365000" />
+      <workItem from="1574232961558" duration="24087000" />
     </task>
     <servers />
   </component>
