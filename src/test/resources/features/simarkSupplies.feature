@@ -35,7 +35,7 @@ Feature: Basic eCommerce site functionality
     Given I am a logged in user on the website
     And my shopping cart is empty
     When I add <num_products> products to my shopping cart
-    Then my shopping cart should contain <num-products> items
+    Then my shopping cart should contain <num_products> items
 
     Examples:
     |num_products|

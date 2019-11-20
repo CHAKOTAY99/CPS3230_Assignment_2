@@ -83,4 +83,8 @@ public class ssPageObject {
         assertTrue(productList.size() == num);
         sleep(2);
     }
+
+    public void removeAnyOneProduct_FromCart(){
+        driver.findElement(By.className("cell_ShoppingCartSummary_RemoveContainer")).click();
+    }
 }

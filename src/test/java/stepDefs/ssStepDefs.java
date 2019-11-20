@@ -126,4 +126,14 @@ public class ssStepDefs {
     public void my_shopping_cart_should_contain_num_products_items(int num_products) {
         ssPageObject.checkShoppingCart_AllItemQuantity(num_products);
     }
+
+    @Given("my shopping cart has {int} products")
+    public void my_shopping_cart_has_products(Integer int1) {
+        i_add_num_products_products_to_my_shopping_cart(int1);
+    }
+
+    @When("I remove the first product in my cart")
+    public void i_remove_the_first_product_in_my_cart() {
+        ssPageObject.removeAnyOneProduct_FromCart();
+    }
 }

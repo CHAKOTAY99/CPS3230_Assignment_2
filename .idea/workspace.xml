@@ -53,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Scenario: Add multiple products to cart">
+  <component name="RunManager" selected="Cucumber java.Scenario: Removing a product from cart">
     <configuration name="Scenario: Add multiple products to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
@@ -130,15 +130,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Valid Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Removing a product from cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
       <option name="GLUE" value="stepDefs" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="CPS3230_Assignment_2" />
-      <option name="NAME_FILTER" value="^Valid Login$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Valid Login$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Valid Login" />
+      <option name="NAME_FILTER" value="^Removing a product from cart$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Removing a product from cart$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Removing a product from cart" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -151,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber java.Scenario: Removing a product from cart" />
         <item itemvalue="Cucumber java.Scenario: Add multiple products to cart" />
         <item itemvalue="Cucumber java.Scenario: Add product to cart" />
         <item itemvalue="Cucumber java.Scenario: Product Search" />
         <item itemvalue="Cucumber java.Scenario: Invalid Login" />
-        <item itemvalue="Cucumber java.Scenario: Valid Login" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +170,8 @@
       <option name="presentableId" value="Default" />
       <updated>1574151540195</updated>
       <workItem from="1574151543257" duration="3935000" />
-      <workItem from="1574232961558" duration="27275000" />
+      <workItem from="1574232961558" duration="27567000" />
+      <workItem from="1574268121422" duration="1127000" />
     </task>
     <servers />
   </component>
