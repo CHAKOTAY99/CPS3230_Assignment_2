@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8db5923-63a4-4eff-ad54-2022039ae416" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/systemTest/ssTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additionalFiles/chromedriver_win32/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,7 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1574151540195</updated>
       <workItem from="1574151543257" duration="3935000" />
-      <workItem from="1574232961558" duration="1360000" />
+      <workItem from="1574232961558" duration="2365000" />
     </task>
     <servers />
   </component>
