@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f8db5923-63a4-4eff-ad54-2022039ae416" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ssPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ssPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/systemTest/ssTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ssPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -171,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1574151540195</updated>
       <workItem from="1574151543257" duration="3935000" />
-      <workItem from="1574232961558" duration="24087000" />
+      <workItem from="1574232961558" duration="27275000" />
     </task>
     <servers />
   </component>

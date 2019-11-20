@@ -70,11 +70,17 @@ public class ssPageObject {
         driver.findElement(By.id("ctl00_MainContent_btn_Buy")).click();
     }
 
-    public void checkShoppingCart_ItemQuantity(int num){
+    public void checkShoppingCart_OneItemQuantity(int num){
         assertTrue(driver.findElement(By.className("cell_ShoppingCartSummary_OrderedQuantity")).getText().equals("x"+num));
     }
 
     public void productQuantityEdit(int num){
         driver.findElement(By.className("txt_ProductDetails_Quantity")).sendKeys("" + num);
+    }
+
+    public void checkShoppingCart_AllItemQuantity(int num){
+        List<WebElement> productList = driver.findElements(By.className("cell_ShoppingCartSummary_OrderedQuantity"));
+        assertTrue(productList.size() == num);
+        sleep(2);
     }
 }

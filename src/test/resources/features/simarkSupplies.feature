@@ -38,7 +38,7 @@ Feature: Basic eCommerce site functionality
     Then my shopping cart should contain <num-products> items
 
     Examples:
-    |num1|
+    |num_products|
     |3   |
     |5   |
     |10  |
