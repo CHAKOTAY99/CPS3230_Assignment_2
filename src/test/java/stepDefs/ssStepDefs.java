@@ -6,11 +6,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageObjects.ssPageObject;
-
-import java.util.List;
 
 public class ssStepDefs {
     WebDriver driver;
@@ -116,9 +113,7 @@ public class ssStepDefs {
         };
 
         for(int i = 0; i < num_products; i++){
-            ssPageObject.productSearch_ProductExists(productsArray[i]);
-            ssPageObject.productSearchExists_ReturnFirst();
-            ssPageObject.buyProduct();
+            ssPageObject.repeatingPurchases(productsArray[i]);
         }
     }
 

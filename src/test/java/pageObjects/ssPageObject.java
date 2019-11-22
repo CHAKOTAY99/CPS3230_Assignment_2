@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
@@ -74,6 +73,7 @@ public class ssPageObject {
         assertTrue(driver.findElement(By.className("cell_ShoppingCartSummary_OrderedQuantity")).getText().equals("x"+num));
     }
 
+    // To edit quantity
     public void productQuantityEdit(int num){
         driver.findElement(By.className("txt_ProductDetails_Quantity")).sendKeys("" + num);
     }
@@ -87,4 +87,11 @@ public class ssPageObject {
     public void removeAnyOneProduct_FromCart(){
         driver.findElement(By.className("cell_ShoppingCartSummary_RemoveContainer")).click();
     }
+
+    public void repeatingPurchases(String item){
+        productSearch_ProductExists(item);
+        productSearchExists_ReturnFirst();
+        buyProduct();
+    }
+
 }
