@@ -10,7 +10,7 @@ Feature: Basic eCommerce site functionality
 
   Scenario: Valid Login
     Given I am a user on the website
-    When I log in using valid credentials
+    When I log in using valid credentials as "testingcps3230" with "what is the time69"
     Then I should be logged in
 
   Scenario: Invalid Login

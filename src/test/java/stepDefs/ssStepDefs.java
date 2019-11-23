@@ -34,9 +34,9 @@ public class ssStepDefs {
         ssPageObject.get();
     }
 
-    @When("I log in using valid credentials")
-    public void userLogin() throws Throwable {
-        ssPageObject.loginUser("testingcps3230", "what is the time69");
+    @When("I log in using valid credentials as {string} with {string}")
+    public void userLogin(String username, String password) throws Throwable {
+        ssPageObject.loginUser(username, password);
     }
 
     @Then("I should be logged in")

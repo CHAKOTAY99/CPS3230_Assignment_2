@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8db5923-63a4-4eff-ad54-2022039ae416" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/WebsiteModelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/enums/WebsiteStates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ssPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ssPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,15 +93,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Add product to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Removing a product from cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
       <option name="GLUE" value="stepDefs" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="CPS3230_Assignment_2" />
-      <option name="NAME_FILTER" value="^Add product to cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Add product to cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Add product to cart" />
+      <option name="NAME_FILTER" value="^Removing a product from cart$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Removing a product from cart$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Removing a product from cart" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -109,15 +112,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Removing a product from cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Valid Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
       <option name="GLUE" value="stepDefs" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="CPS3230_Assignment_2" />
-      <option name="NAME_FILTER" value="^Removing a product from cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Removing a product from cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Removing a product from cart" />
+      <option name="NAME_FILTER" value="^Valid Login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Valid Login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Valid Login" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -140,10 +143,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber java.Feature: simarkSupplies" />
+        <item itemvalue="Cucumber java.Scenario: Valid Login" />
         <item itemvalue="JUnit.CucumberRunner" />
         <item itemvalue="Cucumber java.Scenario: Removing a product from cart" />
         <item itemvalue="Cucumber java.Scenario: Add multiple products to cart" />
-        <item itemvalue="Cucumber java.Scenario: Add product to cart" />
       </list>
     </recent_temporary>
   </component>

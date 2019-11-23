@@ -12,6 +12,10 @@ public class ssPageObject {
 
     WebDriver driver;
 
+    public ssPageObject() {
+
+    }
+
     public void sleep(int seconds){
         try{
             Thread.sleep(seconds * 1000);
