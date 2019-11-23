@@ -44,9 +44,9 @@ public class ssStepDefs {
         ssPageObject.validateUser_valid();
     }
 
-    @When("I log in using invalid credentials")
-    public void i_log_in_using_invalid_credentials() {
-        ssPageObject.loginUser("TestPassword", "TestPassword");
+    @When("I log in using invalid credentials as {string} with {string}")
+    public void i_log_in_using_invalid_credentials(String username, String password) {
+        ssPageObject.loginUser(username, password);
     }
 
     @Then("I should not be logged in")
@@ -54,10 +54,10 @@ public class ssStepDefs {
         ssPageObject.validateUser_invalid();
     }
 
-    @Given("I am a logged in user on the website")
-    public void i_am_a_logged_in_user_on_the_website() {
+    @Given("I am a logged in user on the website as {string} with {string}")
+    public void i_am_a_logged_in_user_on_the_website(String username, String password) {
         ssPageObject.get();
-        ssPageObject.loginUser("testingcps3230", "what is the time69");
+        ssPageObject.loginUser(username, password);
     }
 
     @When("I search for a product")

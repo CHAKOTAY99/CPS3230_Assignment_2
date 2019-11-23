@@ -15,11 +15,11 @@ Feature: Basic eCommerce site functionality
 
   Scenario: Invalid Login
     Given I am a user on the website
-    When I log in using invalid credentials
+    When I log in using invalid credentials as "RandomGuy" with "RandomPassword"
     Then I should not be logged in
 
   Scenario: Product Search
-    Given I am a logged in user on the website
+    Given I am a logged in user on the website as "testingcps3230" with "what is the time69"
     When I search for a product
     And I select the first product in the list
     Then I should see the product details

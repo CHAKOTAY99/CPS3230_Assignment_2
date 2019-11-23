@@ -71,6 +71,7 @@ public class ssPageObject {
 
     public void buyProduct(){
         driver.findElement(By.id("ctl00_MainContent_btn_Buy")).click();
+        sleep(2);
     }
 
     public void checkShoppingCart_OneItemQuantity(int num){
@@ -90,12 +91,14 @@ public class ssPageObject {
 
     public void removeAnyOneProduct_FromCart(){
         driver.findElement(By.className("cell_ShoppingCartSummary_RemoveContainer")).click();
+        sleep(2);
     }
 
     public void repeatingPurchases(String item){
         productSearch_ProductExists(item);
         productSearchExists_ReturnFirst();
         buyProduct();
+        sleep(2);
     }
 
 }
