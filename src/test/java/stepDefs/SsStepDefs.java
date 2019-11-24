@@ -7,11 +7,11 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjects.ssPageObject;
+import pageObjects.SsPageObject;
 
-public class ssStepDefs {
+public class SsStepDefs {
     WebDriver driver;
-    ssPageObject ssPageObject;
+    SsPageObject ssPageObject;
 
 
 
@@ -19,7 +19,7 @@ public class ssStepDefs {
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "C:/dev/trees/CPS3230_Assignment_2/additionalFiles/chromedriver_win32/chromedriver.exe");
         driver = new ChromeDriver();
-        ssPageObject = new ssPageObject(driver);
+        ssPageObject = new SsPageObject(driver);
     }
 
 

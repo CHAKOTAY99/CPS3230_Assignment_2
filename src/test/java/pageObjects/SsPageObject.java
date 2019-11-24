@@ -8,13 +8,9 @@ import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
-public class ssPageObject {
+public class SsPageObject {
 
     WebDriver driver;
-
-    public ssPageObject() {
-
-    }
 
     public void sleep(int seconds){
         try{
@@ -24,7 +20,7 @@ public class ssPageObject {
         }
     }
 
-    public ssPageObject(WebDriver driver){
+    public SsPageObject(WebDriver driver){
         this.driver = driver;
     }
 
