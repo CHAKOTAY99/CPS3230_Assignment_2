@@ -2,23 +2,29 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import nz.ac.waikato.modeljunit.GreedyTester;
 import nz.ac.waikato.modeljunit.StopOnFailureListener;
+import nz.ac.waikato.modeljunit.Tester;
 import nz.ac.waikato.modeljunit.coverage.ActionCoverage;
 import nz.ac.waikato.modeljunit.coverage.StateCoverage;
 import nz.ac.waikato.modeljunit.coverage.TransitionPairCoverage;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pageObjects.SsSystem;
 
+import java.io.FileNotFoundException;
 import java.util.Random;
 
 public class WebsiteModelTest {
 
-    private WebDriver driver;
+    WebDriver driver;
+    WebsiteModel websiteModel;
+
 
     @Before
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "C:/dev/trees/CPS3230_Assignment_2/additionalFiles/chromedriver_win32/chromedriver.exe");
         driver = new ChromeDriver();
+        websiteModel = new WebsiteModel(driver);
     }
 
     @After

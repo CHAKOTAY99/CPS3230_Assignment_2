@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8db5923-63a4-4eff-ad54-2022039ae416" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/WebsiteModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SsSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WebsiteModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebsiteModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WebsiteModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebsiteModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ssPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SsPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SsStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/SsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SsSystem.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,9 +37,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
@@ -56,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WebsiteModelTest.WebsiteModelTestRunner">
+  <component name="RunManager" selected="JUnit.WebsiteModelTest">
     <configuration name="Feature: simarkSupplies" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
@@ -103,6 +102,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebsiteModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CPS3230_Assignment_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WebsiteModelTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WebsiteModelTest.WebsiteModelTestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CPS3230_Assignment_2" />
       <option name="PACKAGE_NAME" value="" />
@@ -125,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebsiteModelTest" />
         <item itemvalue="JUnit.WebsiteModelTest.WebsiteModelTestRunner" />
+        <item itemvalue="JUnit.WebsiteModel.WebsiteModelTestRunner" />
         <item itemvalue="Cucumber java.Scenario: Add multiple products to cart" />
         <item itemvalue="Cucumber java.Feature: simarkSupplies" />
-        <item itemvalue="JUnit.WebsiteModel.WebsiteModelTestRunner" />
-        <item itemvalue="JUnit.WebsiteModelTest" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +156,8 @@
       <workItem from="1574268121422" duration="1840000" />
       <workItem from="1574323670396" duration="1243000" />
       <workItem from="1574408716011" duration="3119000" />
-      <workItem from="1574524618890" duration="11064000" />
+      <workItem from="1574524618890" duration="14527000" />
+      <workItem from="1574591098635" duration="8140000" />
     </task>
     <servers />
   </component>
