@@ -50,9 +50,7 @@ public class WebsiteModel implements FsmModel {
     public boolean isLoggedIn() {
         return getState().equals(WebsiteStates.LOGGED_OUT_USER);
     }
-
-    public @Action
-    void loginUser() throws Exception {
+    public @Action void loginUser() throws Exception {
         // Update the SUT
         systemUnderTest.loggingIn();
         sleep(2);

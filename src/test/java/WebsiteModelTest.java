@@ -1,11 +1,11 @@
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import nz.ac.waikato.modeljunit.GreedyTester;
 import nz.ac.waikato.modeljunit.StopOnFailureListener;
 import nz.ac.waikato.modeljunit.Tester;
 import nz.ac.waikato.modeljunit.coverage.ActionCoverage;
 import nz.ac.waikato.modeljunit.coverage.StateCoverage;
 import nz.ac.waikato.modeljunit.coverage.TransitionPairCoverage;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,14 +17,12 @@ import java.util.Random;
 public class WebsiteModelTest {
 
     WebDriver driver;
-    WebsiteModel websiteModel;
 
 
     @Before
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "C:/dev/trees/CPS3230_Assignment_2/additionalFiles/chromedriver_win32/chromedriver.exe");
         driver = new ChromeDriver();
-        websiteModel = new WebsiteModel(driver);
     }
 
     @After
@@ -43,7 +41,7 @@ public class WebsiteModelTest {
         tester.addCoverageMetric(new TransitionPairCoverage()); //Records the transition pair coverage i.e. the number of paired transitions traversed during the execution of the test.
         tester.addCoverageMetric(new StateCoverage()); //Records the state coverage i.e. the number of states which have been visited during the execution of the test.
         tester.addCoverageMetric(new ActionCoverage()); //Records the number of @Action methods which have ben executed during the execution of the test.
-        tester.generate(500); //Generates 500 transitions
+        tester.generate(250); //Generates 500 transitions
         tester.printCoverage(); //Prints the coverage metrics specified above.
     }
 }

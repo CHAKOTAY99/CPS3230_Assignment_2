@@ -2,7 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
 
@@ -23,7 +26,9 @@ public class SsSystem {
         driver.get("https://www.simarksupplies.com/");
     }
 
-    public boolean isLoggedIn(){ return loggedIn; }
+    public boolean isLoggedIn(){
+        return driver.findElement(By.className("BannerSideLink")).getText().contains("Logout");
+    }
 
     public boolean isLoggedOut(){ return loggedOut; }
 
@@ -38,18 +43,16 @@ public class SsSystem {
     public boolean isInCheckout(){ return checkOut; }
 
     public void loggingIn() throws Exception{
-        if(!loggedIn && loggedOut){
-            sleep(2);
-            driver.findElement(By.className("BannerSideLink")).click();
-            sleep(2);
-            driver.findElement(By.id("ctl00_MainContent_txt_UserName")).sendKeys("testingcps3230");
-            driver.findElement(By.id("ctl00_MainContent_txt_Password")).sendKeys("what is the time69");
-            driver.findElement(By.id("ctl00_MainContent_btn_Login")).click();
-            sleep(2);
-            loggedIn = true;
-            loggedOut = false;
-        } else {
-            throw new IllegalStateException();
-        }
+        sleep(2);
+        driver.findElement(By.className("BannerSideLink")).click();
+//        sleep(2);
+//        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+//        driver.findElement(By.id("ctl00_MainContent_txt_UserName")).sendKeys("testingcps3230");
+        driver.findElement(By.xpath("//input[@id='ctl00_MainContent_txt_UserName']")).sendKeys("testingcps3230");
+        sleep(2);
+        driver.findElement(By.id("ctl00_MainContent_txt_Password")).sendKeys("what is the time69");
+        sleep(2);
+        driver.findElement(By.id("ctl00_MainContent_btn_Login")).click();
+        sleep(2);
     }
 }
