@@ -1,10 +1,12 @@
 import enums.WebsiteStates;
 import nz.ac.waikato.modeljunit.Action;
 import nz.ac.waikato.modeljunit.FsmModel;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pageObjects.SsSystem;
 
-import static java.lang.Thread.sleep;
+import java.util.concurrent.TimeUnit;
+
 import static org.junit.Assert.assertEquals;
 
 public class WebsiteModel implements FsmModel {
@@ -33,9 +35,11 @@ public class WebsiteModel implements FsmModel {
     }
 
     public void reset(boolean b) {
-        if (b) {
-            systemUnderTest = new SsSystem(driver);
+
+        if(driver.findElement(By.className("BannerSideLink")).getText().contains("Logout")){
+            driver.findElement(By.className("BannerSideLink")).click();
         }
+
         modelState = WebsiteStates.LOGGED_OUT_USER;
         loggedOut = true;
         loggedIn = false;
@@ -44,16 +48,21 @@ public class WebsiteModel implements FsmModel {
         resultList = false;
         shopCart = false;
         checkOut = false;
+        if (b) {
+            systemUnderTest = new SsSystem(driver);
+        }
     }
 
+
     // Transitions including guards
-    public boolean isLoggedIn() {
-        return getState().equals(WebsiteStates.LOGGED_OUT_USER);
-    }
-    public @Action void loginUser() throws Exception {
+    public boolean loginUserGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER); }
+    @Action
+    public void loginUser() throws Exception {
         // Update the SUT
         systemUnderTest.loggingIn();
-        sleep(2);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+
         // Updating Model
         modelState = WebsiteStates.LOGGED_IN_USER;
         loggedOut = false;

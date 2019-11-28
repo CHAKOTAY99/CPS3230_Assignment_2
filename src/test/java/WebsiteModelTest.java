@@ -41,7 +41,7 @@ public class WebsiteModelTest {
         tester.addCoverageMetric(new TransitionPairCoverage()); //Records the transition pair coverage i.e. the number of paired transitions traversed during the execution of the test.
         tester.addCoverageMetric(new StateCoverage()); //Records the state coverage i.e. the number of states which have been visited during the execution of the test.
         tester.addCoverageMetric(new ActionCoverage()); //Records the number of @Action methods which have ben executed during the execution of the test.
-        tester.generate(250); //Generates 500 transitions
+        tester.generate(500); //Generates 500 transitions
         tester.printCoverage(); //Prints the coverage metrics specified above.
     }
 }

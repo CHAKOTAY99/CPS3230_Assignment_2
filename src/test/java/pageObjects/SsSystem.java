@@ -43,16 +43,13 @@ public class SsSystem {
     public boolean isInCheckout(){ return checkOut; }
 
     public void loggingIn() throws Exception{
-        sleep(2);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.className("BannerSideLink")).click();
-//        sleep(2);
-//        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-//        driver.findElement(By.id("ctl00_MainContent_txt_UserName")).sendKeys("testingcps3230");
-        driver.findElement(By.xpath("//input[@id='ctl00_MainContent_txt_UserName']")).sendKeys("testingcps3230");
-        sleep(2);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.findElement(By.id("ctl00_MainContent_txt_UserName")).sendKeys("testingcps3230");
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.id("ctl00_MainContent_txt_Password")).sendKeys("what is the time69");
-        sleep(2);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.id("ctl00_MainContent_btn_Login")).click();
-        sleep(2);
     }
 }
