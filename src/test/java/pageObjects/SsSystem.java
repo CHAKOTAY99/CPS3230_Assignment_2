@@ -44,7 +44,7 @@ public class SsSystem {
 
     public boolean isInCheckout(){ return checkOut; }
 
-    public void loggingIn() throws Exception{
+    public void loggingIn() throws Exception {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.className("BannerSideLink")).click();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
@@ -53,5 +53,10 @@ public class SsSystem {
         driver.findElement(By.id("ctl00_MainContent_txt_Password")).sendKeys("what is the time69");
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.id("ctl00_MainContent_btn_Login")).click();
+    }
+
+    public void loggingOut() throws Exception {
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.findElement(By.className("BannerSideLink")).click();
     }
 }

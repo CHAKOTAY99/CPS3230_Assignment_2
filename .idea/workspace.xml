@@ -149,6 +149,7 @@
       <workItem from="1574591098635" duration="8140000" />
       <workItem from="1574924135609" duration="5938000" />
       <workItem from="1574951524702" duration="6057000" />
+      <workItem from="1574979402316" duration="1305000" />
     </task>
     <servers />
   </component>
@@ -167,16 +168,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/WebsiteModel.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

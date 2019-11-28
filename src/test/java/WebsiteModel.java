@@ -72,4 +72,21 @@ public class WebsiteModel implements FsmModel {
         assertEquals("The model's user login state does not match the SUT's user login state", loggedIn, systemUnderTest.isLoggedIn());
         assertEquals("The model's user logout state does not match te SUT's user logout state", loggedOut, systemUnderTest.isLoggedOut());
     }
+
+    public boolean logoutUserGuard() { return getState().equals(WebsiteStates.LOGGED_IN_USER); }
+    @Action
+    public void logoutUser() throws Exception {
+        // Update the SUT
+        systemUnderTest.loggingOut();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+        // Update Model
+        modelState = WebsiteStates.LOGGED_OUT_USER;
+        loggedOut = true;
+        loggedIn = false;
+
+        // Checking correspondence between the model and SUT
+        assertEquals("The model's user login state does not match the SUT's user logout state", loggedIn, systemUnderTest.isLoggedIn());
+        assertEquals("The model's user logout state does not match te SUT's user logout state", loggedOut, systemUnderTest.isLoggedOut());
+    }
 }
