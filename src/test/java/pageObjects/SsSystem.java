@@ -30,7 +30,9 @@ public class SsSystem {
         return driver.findElement(By.className("BannerSideLink")).getText().contains("Logout");
     }
 
-    public boolean isLoggedOut(){ return loggedOut; }
+    public boolean isLoggedOut(){
+        return driver.findElement(By.className("BannerSideLink")).getText().contains("Login/Register");
+    }
 
     public boolean isInRegistrationOrLogin(){ return regLogin; }
 
