@@ -36,13 +36,16 @@ public class SsSystem {
 
     public boolean isInProductDetails(){ return prodDetails; }
 
-    public boolean isInResultsList(){ return resultList; }
+    public boolean isInResultsList(){
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        return driver.findElement(By.className("PageTitle_Header1")).getText().contains("Showing");
+    }
 
     public boolean isInShoppingCart(){ return shopCart; }
 
     public boolean isInCheckout(){ return checkOut; }
 
-    public void loggingIn() throws Exception {
+    public void loggingIn() {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.className("BannerSideLink")).click();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
@@ -53,8 +56,15 @@ public class SsSystem {
         driver.findElement(By.id("ctl00_MainContent_btn_Login")).click();
     }
 
-    public void loggingOut() throws Exception {
+    public void loggingOut() {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.className("BannerSideLink")).click();
+    }
+
+    public void searchProduct(){
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.findElement(By.id("ctl00_txt_SearchBox")).clear();
+        driver.findElement(By.id("ctl00_txt_SearchBox")).sendKeys("Eminent 6030 30m Patch Cat5E Grey");
+        driver.findElement(By.id("ctl00_btn_Search")).click();
     }
 }

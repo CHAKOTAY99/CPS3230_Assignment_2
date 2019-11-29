@@ -41,7 +41,6 @@ public class SsPageObject {
     public void productSearch_ProductExists(String item){
         driver.findElement(By.id("ctl00_txt_SearchBox")).sendKeys(item);
         driver.findElement(By.id("ctl00_btn_Search")).click();
-
     }
 
     public void productSearchExists_ReturnFirst(){

@@ -56,8 +56,9 @@ public class WebsiteModel implements FsmModel {
 
     // Transitions including guards
     public boolean loginUserGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER); }
+
     @Action
-    public void loginUser() throws Exception {
+    public void loginUser() {
         // Update the SUT
         systemUnderTest.loggingIn();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
@@ -75,7 +76,7 @@ public class WebsiteModel implements FsmModel {
 
     public boolean logoutUserGuard() { return getState().equals(WebsiteStates.LOGGED_IN_USER); }
     @Action
-    public void logoutUser() throws Exception {
+    public void logoutUser() {
         // Update the SUT
         systemUnderTest.loggingOut();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
@@ -88,5 +89,21 @@ public class WebsiteModel implements FsmModel {
         // Checking correspondence between the model and SUT
         assertFalse("The model's user login state does not match the SUT's user login state", systemUnderTest.isLoggedIn());
         assertTrue("The model's user logout state does not match the SUT's user logout state", systemUnderTest.isLoggedOut());
+    }
+
+    public boolean searchListGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER); }
+    @Action
+    public void searchList() {
+        // Update the SUT
+        systemUnderTest.searchProduct();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+        // Update Model
+        modelState = WebsiteStates.RESULT_LIST;
+        resultList = true;
+
+        // Checking correspondence between the model and the SUT
+        assertTrue("The model's search state does not match the SUT's search state", systemUnderTest.isInResultsList());
+        assertTrue("The model's user state does not match the SUT's user state", systemUnderTest.isLoggedOut() || systemUnderTest.isLoggedIn());
     }
 }
