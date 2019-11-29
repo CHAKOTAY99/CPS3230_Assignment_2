@@ -7,7 +7,7 @@ import pageObjects.SsSystem;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class WebsiteModel implements FsmModel {
 
@@ -65,12 +65,12 @@ public class WebsiteModel implements FsmModel {
 
         // Updating Model
         modelState = WebsiteStates.LOGGED_IN_USER;
-        loggedOut = false;
         loggedIn = true;
+        loggedOut = false;
 
         // Checking correspondence between the model and SUT
-        assertEquals("The model's user login state does not match the SUT's user login state", loggedIn, systemUnderTest.isLoggedIn());
-        assertEquals("The model's user logout state does not match te SUT's user logout state", loggedOut, systemUnderTest.isLoggedOut());
+        assertTrue("The model's user login state does not match the SUT's user login state", systemUnderTest.isLoggedIn());
+        assertFalse("The model's user logout state does not match te SUT's user logout state", systemUnderTest.isLoggedOut());
     }
 
     public boolean logoutUserGuard() { return getState().equals(WebsiteStates.LOGGED_IN_USER); }
@@ -82,11 +82,11 @@ public class WebsiteModel implements FsmModel {
 
         // Update Model
         modelState = WebsiteStates.LOGGED_OUT_USER;
-        loggedOut = true;
         loggedIn = false;
+        loggedOut = true;
 
         // Checking correspondence between the model and SUT
-        assertEquals("The model's user login state does not match the SUT's user login state", loggedIn, systemUnderTest.isLoggedIn());
-        assertEquals("The model's user logout state does not match te SUT's user logout state", loggedOut, systemUnderTest.isLoggedOut());
+        assertFalse("The model's user login state does not match the SUT's user login state", systemUnderTest.isLoggedIn());
+        assertTrue("The model's user logout state does not match the SUT's user logout state", systemUnderTest.isLoggedOut());
     }
 }

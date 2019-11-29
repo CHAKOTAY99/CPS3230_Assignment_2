@@ -4,8 +4,6 @@
     <list default="true" id="f8db5923-63a4-4eff-ad54-2022039ae416" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WebsiteModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebsiteModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/SsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SsPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/SsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SsSystem.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Feature: simarkSupplies">
+  <component name="RunManager" selected="JUnit.WebsiteModelTest">
     <configuration name="Feature: simarkSupplies" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
@@ -123,8 +121,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber java.Feature: simarkSupplies" />
         <item itemvalue="JUnit.WebsiteModelTest" />
+        <item itemvalue="Cucumber java.Feature: simarkSupplies" />
         <item itemvalue="Cucumber java.Scenario: Valid Login" />
         <item itemvalue="JUnit.WebsiteModelTest.WebsiteModelTestRunner" />
         <item itemvalue="JUnit.WebsiteModel.WebsiteModelTestRunner" />
@@ -151,7 +149,7 @@
       <workItem from="1574924135609" duration="5938000" />
       <workItem from="1574951524702" duration="6057000" />
       <workItem from="1574979402316" duration="1305000" />
-      <workItem from="1575011723811" duration="3745000" />
+      <workItem from="1575011723811" duration="6369000" />
     </task>
     <servers />
   </component>
