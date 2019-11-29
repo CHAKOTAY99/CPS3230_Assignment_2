@@ -2,12 +2,8 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
-
-import static java.lang.Thread.sleep;
 
 public class SsSystem {
 
@@ -27,10 +23,12 @@ public class SsSystem {
     }
 
     public boolean isLoggedIn(){
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         return driver.findElement(By.className("BannerSideLink")).getText().contains("Logout");
     }
 
     public boolean isLoggedOut(){
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         return driver.findElement(By.className("BannerSideLink")).getText().contains("Login/Register");
     }
 
