@@ -80,7 +80,8 @@ public class WebsiteModel implements FsmModel {
 
         // Checking correspondence between the model and SUT
         assertTrue("The model's user login state does not match the SUT's user login state", systemUnderTest.isLoggedIn());
-        assertFalse("The model's user logout state does not match te SUT's user logout state", systemUnderTest.isLoggedOut() && systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList() && systemUnderTest.isInShoppingCart());
+        assertFalse("The model's user logout state does not match te SUT's user logout state", systemUnderTest.isLoggedOut() &&
+                systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList() && systemUnderTest.isInShoppingCart());
     }
 
     public boolean logoutUserGuard() {
@@ -99,11 +100,13 @@ public class WebsiteModel implements FsmModel {
         loggedOut = true;
 
         // Checking correspondence between the model and SUT
-        assertFalse("The model's user login state does not match the SUT's user login state", systemUnderTest.isLoggedIn());
+        assertFalse("The model's user login state does not match the SUT's user login state", systemUnderTest.isLoggedIn() &&
+                systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList() && systemUnderTest.isInShoppingCart());
         assertTrue("The model's user logout state does not match the SUT's user logout state", systemUnderTest.isLoggedOut());
     }
 
-    public boolean searchListGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER) || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
+    public boolean searchListGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER) ||
+            getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
     @Action
     public void searchList() {
         // Update the SUT
@@ -117,10 +120,11 @@ public class WebsiteModel implements FsmModel {
         // Checking correspondence between the model and the SUT
         assertTrue("The model's search state does not match the SUT's search state", systemUnderTest.isInResultsList());
         assertTrue("The model's user state does not match the SUT's user state", systemUnderTest.isLoggedOut() || systemUnderTest.isLoggedIn());
-        assertFalse("The model's state should not match the SUT's state", systemUnderTest.isInShoppingCart());
+        assertFalse("The model's state should not match the SUT's state", systemUnderTest.isInShoppingCart() && systemUnderTest.isInHeadingResultsList());
     }
 
-    public boolean searchCategoryGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER) || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
+    public boolean searchCategoryGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER)
+            || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
     @Action
     public void searchCategory(){
         // Update the SUT
@@ -137,7 +141,8 @@ public class WebsiteModel implements FsmModel {
         assertFalse("The model's state should not match the SUT's state", systemUnderTest.isInShoppingCart() && systemUnderTest.isInHeadingResultsList());
     }
 
-    public boolean searchProductHeading_SystemsGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER) || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
+    public boolean searchProductHeading_SystemsGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER)
+            || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
     @Action
     public void searchProductHeading_Systems() {
         // Update the SUT
@@ -154,7 +159,8 @@ public class WebsiteModel implements FsmModel {
         assertFalse("The model's state should not match the SUT's state", systemUnderTest.isInShoppingCart() && systemUnderTest.isInHeadingResultsList());
     }
 
-    public boolean searchProductHeading_NotebookGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER) || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
+    public boolean searchProductHeading_NotebookGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER)
+            || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
     @Action
     public void searchProductHeading_Notebook(){
         // Update the SUT
@@ -171,7 +177,8 @@ public class WebsiteModel implements FsmModel {
         assertFalse("The model's state should not match the SUT's state", systemUnderTest.isInShoppingCart() && systemUnderTest.isInHeadingResultsList());
     }
 
-    public boolean searchNewProductHeadingGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER) || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
+    public boolean searchNewProductHeadingGuard() { return getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.LOGGED_IN_USER)
+            || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.RESULT_LIST); }
     @Action
     public void searchNewProductHeading(){
         // Update the SUT
@@ -202,7 +209,9 @@ public class WebsiteModel implements FsmModel {
 
         // Check correspondence between the model and the SUT
         assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInShoppingCart());
-        assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList());
+        assertTrue("The model's user state does not match the SUT's user state", systemUnderTest.isLoggedOut() || systemUnderTest.isLoggedIn());
+        assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList() &&
+                systemUnderTest.isInHeadingResultsList());
     }
 
     public boolean buyProduct_FromResultsList_ModifyQtyGuard() { return getState().equals(WebsiteStates.RESULT_LIST); }
@@ -219,6 +228,25 @@ public class WebsiteModel implements FsmModel {
 
         // Check correspondence between the model and the SUT
         assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInShoppingCart());
-        assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList());
+        assertTrue("The model's user state does not match the SUT's user state", systemUnderTest.isLoggedOut() || systemUnderTest.isLoggedIn());
+        assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList());
+    }
+
+    public boolean viewShoppingCartGuard() { return getState().equals(WebsiteStates.LOGGED_IN_USER) || getState().equals(WebsiteStates.RESULT_LIST)
+            || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.LOGGED_OUT_USER); }
+    @Action
+    public void viewShoppingCart() {
+        // Update the SUT
+        systemUnderTest.goToCart();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+        // Update Model
+        modelState = WebsiteStates.SHOPPING_CART;
+        shopCart = true;
+
+        // Check correspondence between the model and the SUT
+        assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInShoppingCart());
+        assertTrue("The model's user state does not match the SUT's user state", systemUnderTest.isLoggedOut() || systemUnderTest.isLoggedIn());
+        assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList());
     }
 }

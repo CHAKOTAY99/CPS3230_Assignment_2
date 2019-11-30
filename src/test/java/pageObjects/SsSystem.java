@@ -109,4 +109,13 @@ public class SsSystem {
         driver.findElement(By.name("ctl00$ctl18$ctl00$ctl01")).click();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
     }
+
+    public void goToCart(){
+        if(driver.findElements(By.name("div_ShoppingCartSummary_ViewCartContainer")).size() != 1){
+            driver.get("https://www.simarksupplies.com/ViewCart.aspx");
+        } else {
+            driver.findElement(By.name("ctl00$ctl18$ctl00$ctl01")).click();
+            driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+        }
+    }
 }
