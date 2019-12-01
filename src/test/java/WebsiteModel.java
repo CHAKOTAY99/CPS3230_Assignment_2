@@ -1,3 +1,4 @@
+import cucumber.api.java.en_old.Ac;
 import enums.WebsiteStates;
 import nz.ac.waikato.modeljunit.Action;
 import nz.ac.waikato.modeljunit.FsmModel;
@@ -189,7 +190,6 @@ public class WebsiteModel implements FsmModel {
 
         // Check correspondence between the model and the SUT
         assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInShoppingCart());
-        assertTrue("The model's user state does not match the SUT's user state", systemUnderTest.isLoggedOut() || systemUnderTest.isLoggedIn());
         assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList() &&
                 systemUnderTest.isInHeadingResultsList());
     }
@@ -206,7 +206,6 @@ public class WebsiteModel implements FsmModel {
 
         // Check correspondence between the model and the SUT
         assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInShoppingCart());
-        assertTrue("The model's user state does not match the SUT's user state", systemUnderTest.isLoggedOut() || systemUnderTest.isLoggedIn());
         assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList());
     }
 
@@ -240,16 +239,14 @@ public class WebsiteModel implements FsmModel {
 
         // Checking correspondence between the model and the SUT
         assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInProductDetails());
-        assertTrue("The model's user state does not match the SUT's user state", systemUnderTest.isLoggedOut() || systemUnderTest.isLoggedIn());
-        assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList()
-        && systemUnderTest.isInShoppingCart());
+        assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList());
     }
 
     public boolean buyProduct_FromProductDetailsGuard() { return getState().equals(WebsiteStates.PRODUCT_DETAILS); }
     @Action
     public void buyProduct_FromProductDetails(){
         // Update the SUT
-        systemUnderTest.buyFromProductList_ViewCart();
+        systemUnderTest.buyFromProductDetails_ViewCart();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
         // Update Model
@@ -257,8 +254,35 @@ public class WebsiteModel implements FsmModel {
 
         // Checking correspondence between the model and the SUT
         assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInShoppingCart());
-        assertTrue("The model's user state does not match the SUT's user state", systemUnderTest.isLoggedOut() || systemUnderTest.isLoggedIn());
-        assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList()
-                && systemUnderTest.isInProductDetails());
+        assertFalse("The model's page state does not match the SUT's page state", systemUnderTest.isInProductDetails());
+    }
+
+    public boolean buyProduct_FromProductDetails_ModifyQtyGuard() { return getState().equals(WebsiteStates.PRODUCT_DETAILS); }
+    @Action
+    public void buyProduct_FromProductDetails_ModifyQty() {
+        // Update the SUT
+        systemUnderTest.buyFromProductList_ModifyQty_ViewCart();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+        // Update Model
+        modelState = WebsiteStates.SHOPPING_CART;
+
+        // Checking correspondence between the model and the SUT
+        assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInShoppingCart());
+        assertFalse("The model's page state does not match the SUT's page state", systemUnderTest.isInProductDetails());
+    }
+
+    public boolean removeItem_FromShoppingCartGuard() { return getState().equals(WebsiteStates.SHOPPING_CART); }
+    @Action
+    public void removeItem_FromShoppingCart() {
+        // Update the SUT
+        systemUnderTest.removeFirstItem_FromCart();
+        driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
+
+        // Update Model
+        modelState = WebsiteStates.SHOPPING_CART;
+
+        // Checking correspondence between the model and the SUT
+        assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInShoppingCart());
     }
 }

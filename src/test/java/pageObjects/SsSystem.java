@@ -28,7 +28,14 @@ public class SsSystem {
 
     public boolean isInProductDetails() {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        return driver.findElement(By.id("ctl00_MainContent_header2_ProductName")).isDisplayed();
+        // PageTitle_Header2
+        List<WebElement> foundElements = driver.findElements(By.xpath("//*[contains(@id,'section_title')]"));
+        if(foundElements.size() != 2){
+            return false;
+        } else {
+            return true;
+        }
+//        return driver.findElement(By.id("ctl00_MainContent_header2_ProductName")).isDisplayed();
     }
 
     public boolean isInResultsList() {
@@ -117,9 +124,30 @@ public class SsSystem {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
-    public void buyFromProductList_ViewCart() {
+    public void buyFromProductDetails_ViewCart() {
         driver.findElement(By.id("ctl00_MainContent_btn_Buy")).click();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.name("ctl00$ctl18$ctl00$ctl01")).click();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);    }
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+    }
+
+    public void buyFromProductList_ModifyQty_ViewCart() {
+        List<WebElement> qtyList = driver.findElements(By.className("txt_ProductDetails_Quantity"));
+        qtyList.get(0).clear();
+        qtyList.get(0).sendKeys("2");
+        driver.findElement(By.id("ctl00_MainContent_btn_Buy")).click();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.findElement(By.name("ctl00$ctl18$ctl00$ctl01")).click();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+    }
+
+    public void removeFirstItem_FromCart(){
+        List<WebElement> checkoutList = driver.findElements(By.className("Products_TextBox_Quantity"));
+        if(checkoutList.size() > 0){
+            checkoutList.get(0).clear();
+            checkoutList.get(0).sendKeys("0");
+            driver.findElement(By.id("ctl00_MainContent_btn_UpdateCart")).click();
+            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        }
+    }
 }
