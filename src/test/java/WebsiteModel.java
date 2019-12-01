@@ -283,6 +283,21 @@ public class WebsiteModel implements FsmModel {
         modelState = WebsiteStates.SHOPPING_CART;
 
         // Checking correspondence between the model and the SUT
-        assertTrue("The model's cart state does not match the SUT's cart state", systemUnderTest.isInShoppingCart());
+        assertTrue("The model's shopping cart state does not match the SUT's shopping cart state", systemUnderTest.isInShoppingCart());
+    }
+
+    public boolean checkoutGuard() { return systemUnderTest.isLoggedIn() && getState().equals(WebsiteStates.SHOPPING_CART); }
+    @Action
+    public void checkout() {
+        // Update the SUT
+        systemUnderTest.checkout();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+        // Update Model
+        modelState = WebsiteStates.CHECKOUT;
+
+        // Checking correspondence between the model and the SUT
+        assertTrue("The model's checkout state does not match the SUT's checkout state", systemUnderTest.isInCheckout());
+        assertFalse("The model's shopping cart state does not match the SUT's shopping cart state", systemUnderTest.isInShoppingCart());
     }
 }
