@@ -286,7 +286,7 @@ public class WebsiteModel implements FsmModel {
         assertTrue("The model's shopping cart state does not match the SUT's shopping cart state", systemUnderTest.isInShoppingCart());
     }
 
-    public boolean checkoutGuard() { return systemUnderTest.isLoggedIn() && getState().equals(WebsiteStates.SHOPPING_CART); }
+    public boolean checkoutGuard() { return systemUnderTest.isLoggedIn() && !systemUnderTest.isCartEmpty() && getState().equals(WebsiteStates.SHOPPING_CART); }
     @Action
     public void checkout() {
         // Update the SUT

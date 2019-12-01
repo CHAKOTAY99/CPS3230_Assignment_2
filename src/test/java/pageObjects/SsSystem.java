@@ -51,9 +51,19 @@ public class SsSystem {
         return driver.findElement(By.className("PageTitle_Header1")).getText().contains("View Shopping Cart");
     }
 
-    public boolean isInCheckout(){
+    public boolean isInCheckout() {
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         return driver.findElement(By.className("PageTitle_Header1")).getText().contains("Check");
+    }
+
+    public boolean isCartEmpty() {
+        driver.get("https://www.simarksupplies.com/ViewCart.aspx");
+        List<WebElement> emptyCart = driver.findElements(By.className("lbl_InformationMessage"));
+        if(emptyCart.size() != 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void loggingIn() {
@@ -158,11 +168,8 @@ public class SsSystem {
     }
 
     public void checkout(){
-        List<WebElement> emptyCart = driver.findElements(By.className("lbl_InformationMessage"));
-        if(emptyCart.size() == 0) {
-            driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-            driver.findElement(By.id("ctl00_MainContent_btn_Checkout")).click();
-            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        }
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        driver.findElement(By.id("ctl00_MainContent_btn_Checkout")).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 }
