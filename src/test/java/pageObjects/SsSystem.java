@@ -52,8 +52,8 @@ public class SsSystem {
     }
 
     public boolean isInCheckout(){
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        return driver.findElement(By.className("PageTitle_Header1")).getText().contains("Checkout");
+        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+        return driver.findElement(By.className("PageTitle_Header1")).getText().contains("Check");
     }
 
     public void loggingIn() {
@@ -145,11 +145,12 @@ public class SsSystem {
 
     public void removeFirstItem_FromCart() {
         List<WebElement> emptyCart = driver.findElements(By.className("lbl_InformationMessage"));
-        if(emptyCart.size() != 0) {
+        if(emptyCart.size() == 0) {
             List<WebElement> checkoutList = driver.findElements(By.className("Products_TextBox_Quantity"));
             if(checkoutList.size() > 0) {
                 checkoutList.get(0).clear();
                 checkoutList.get(0).sendKeys("0");
+                driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
                 driver.findElement(By.id("ctl00_MainContent_btn_UpdateCart")).click();
                 driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
             }
@@ -157,6 +158,11 @@ public class SsSystem {
     }
 
     public void checkout(){
-        driver.findElement(By.id("ctl00_MainContent_btn_Checkout")).click();
+        List<WebElement> emptyCart = driver.findElements(By.className("lbl_InformationMessage"));
+        if(emptyCart.size() == 0) {
+            driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+            driver.findElement(By.id("ctl00_MainContent_btn_Checkout")).click();
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        }
     }
 }
