@@ -54,10 +54,8 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void loginUser() {
         // Update the SUT
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        systemUnderTest.agreeConsent();
         systemUnderTest.loggingIn();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-
 
         // Updating Model
         modelState = WebsiteStates.LOGGED_IN_USER;
@@ -76,6 +74,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void logoutUser() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.loggingOut();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -93,6 +92,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void searchList() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.searchProduct();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -111,6 +111,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void searchCategory(){
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.searchCategory();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -129,6 +130,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void searchProductHeading_Systems() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.searchProductHeading(3);
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -147,6 +149,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void searchProductHeading_Notebook(){
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.searchProductHeading(4);
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -165,6 +168,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void searchNewProductHeading(){
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.searchProductHeading(1);
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -182,6 +186,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void buyProduct_FromResultsList() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.buyFromList_ViewCart();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -198,6 +203,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void buyProduct_FromResultsList_ModifyQty() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.buyFromList_ViewCart_ModifyQty();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -214,6 +220,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void viewShoppingCart() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.goToCart();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -231,6 +238,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void productDetailsPage() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.viewProductDetails();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -246,6 +254,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void buyProduct_FromProductDetails(){
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.buyFromProductDetails_ViewCart();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -261,6 +270,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void buyProduct_FromProductDetails_ModifyQty() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.buyFromProductList_ModifyQty_ViewCart();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
@@ -276,6 +286,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void removeItem_FromShoppingCart() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.removeFirstItem_FromCart();
         driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
 
@@ -290,6 +301,7 @@ public class WebsiteModel implements FsmModel {
     @Action
     public void checkout() {
         // Update the SUT
+        systemUnderTest.agreeConsent();
         systemUnderTest.checkout();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 

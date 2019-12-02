@@ -84,6 +84,7 @@ public class SsSystem {
         driver.findElement(By.id("ctl00_MainContent_txt_Password")).sendKeys("what is the time69");
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.id("ctl00_MainContent_btn_Login")).click();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
     public void loggingOut() {
@@ -176,11 +177,20 @@ public class SsSystem {
     }
 
     public void checkout(){
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        // "cc-btn cc-dismiss"
-        driver.findElement(By.xpath("//*[@class='cc-btn cc-dismiss']"));
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.id("ctl00_MainContent_btn_Checkout")).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    public void agreeConsent(){
+        String consentCssValue = driver.findElement(By.className("cc-bottom")).getCssValue("display");
+        if(!consentCssValue.equals("none")){
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.findElement(By.xpath("//*[@class='cc-btn cc-dismiss']")).click();
+            driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        }
+//        List<WebElement> consentButton = driver.findElements(By.className("cc-bottom"));
+//        if(consentButton.size() != 0){
+//        }
     }
 }
