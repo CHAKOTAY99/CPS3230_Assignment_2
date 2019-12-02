@@ -189,8 +189,5 @@ public class SsSystem {
             driver.findElement(By.xpath("//*[@class='cc-btn cc-dismiss']")).click();
             driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         }
-//        List<WebElement> consentButton = driver.findElements(By.className("cc-bottom"));
-//        if(consentButton.size() != 0){
-//        }
     }
 }
