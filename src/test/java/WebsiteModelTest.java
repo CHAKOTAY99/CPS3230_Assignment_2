@@ -31,11 +31,11 @@ public class WebsiteModelTest {
     // Test runner
     @Test
     public void WebsiteModelTestRunner() {
-//        final GreedyTester tester = new GreedyTester(new WebsiteModel(driver));
-        final Tester tester = new LookaheadTester(new WebsiteModel(driver));
+        final GreedyTester tester = new GreedyTester(new WebsiteModel(driver));
+//        final Tester tester = new LookaheadTester(new WebsiteModel(driver));
 //        final Tester tester = new RandomTester(new WebsiteModel(driver));
         tester.setRandom(new Random());
-//        tester.buildGraph(); - keep turned off for LookaheadTester
+        tester.buildGraph();
         tester.addListener(new StopOnFailureListener());
         tester.addListener("verbose");
         tester.addCoverageMetric(new TransitionPairCoverage());
