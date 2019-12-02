@@ -57,12 +57,21 @@ public class SsSystem {
     }
 
     public boolean isCartEmpty() {
-        driver.get("https://www.simarksupplies.com/ViewCart.aspx");
-        List<WebElement> emptyCart = driver.findElements(By.className("lbl_InformationMessage"));
-        if(emptyCart.size() != 0) {
+        List<WebElement> emptyShoppingCart = driver.findElements(By.className("div_ShoppingCartSummary_NoItemsMsg"));
+        // If returns 1 then there is nothing in the cart. Else it should return 0
+        if(emptyShoppingCart.size() != 0){
             return true;
         } else {
             return false;
+        }
+    }
+
+    public boolean isResultListEmpty() {
+        List<WebElement> productList = driver.findElements(By.className("Products_Name"));
+        if(productList.size() != 0){
+            return false;
+        } else {
+            return true;
         }
     }
 
@@ -99,11 +108,12 @@ public class SsSystem {
         List<WebElement> productList = driver.findElements(By.className("HyperLink_MenuLink"));
         // PC Systems (3) Notebooks (4). Always 5 headings. Offers are seasonal, ez. black friday
         productList.get(num).click();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
     }
 
     public void buyFromList_ViewCart() {
-        List<WebElement> productList = driver.findElements(By.xpath("//*[contains(@id,'btn_Buy')" +
-                "]"));
+        List<WebElement> productList = driver.findElements(By.xpath("//*[contains(@id,'btn_Buy')]"));
         productList.get(0).click();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.findElement(By.name("ctl00$ctl18$ctl00$ctl01")).click();
@@ -122,9 +132,7 @@ public class SsSystem {
     }
 
     public void goToCart() {
-        if(driver.findElements(By.name("div_ShoppingCartSummary_ViewCartContainer")).size() != 1){
-            driver.get("https://www.simarksupplies.com/ViewCart.aspx");
-        } else {
+        if(!isCartEmpty()) {
             driver.findElement(By.name("ctl00$ctl18$ctl00$ctl01")).click();
             driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         }
@@ -168,7 +176,10 @@ public class SsSystem {
     }
 
     public void checkout(){
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        // "cc-btn cc-dismiss"
+        driver.findElement(By.xpath("//*[@class='cc-btn cc-dismiss']"));
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.id("ctl00_MainContent_btn_Checkout")).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }

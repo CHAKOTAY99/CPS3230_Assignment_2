@@ -209,8 +209,8 @@ public class WebsiteModel implements FsmModel {
         assertFalse("The model's result list state does not match the SUT's result list state", systemUnderTest.isInResultsList() && systemUnderTest.isInHeadingResultsList());
     }
 
-    public boolean viewShoppingCartGuard() { return getState().equals(WebsiteStates.LOGGED_IN_USER) || getState().equals(WebsiteStates.RESULT_LIST)
-            || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.PRODUCT_DETAILS); }
+    public boolean viewShoppingCartGuard() { return !systemUnderTest.isCartEmpty() && (getState().equals(WebsiteStates.LOGGED_IN_USER) || getState().equals(WebsiteStates.RESULT_LIST)
+            || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.LOGGED_OUT_USER) || getState().equals(WebsiteStates.PRODUCT_DETAILS)); }
     @Action
     public void viewShoppingCart() {
         // Update the SUT
@@ -272,7 +272,7 @@ public class WebsiteModel implements FsmModel {
         assertFalse("The model's page state does not match the SUT's page state", systemUnderTest.isInProductDetails());
     }
 
-    public boolean removeItem_FromShoppingCartGuard() { return getState().equals(WebsiteStates.SHOPPING_CART); }
+    public boolean removeItem_FromShoppingCartGuard() { return !systemUnderTest.isCartEmpty() && getState().equals(WebsiteStates.SHOPPING_CART); }
     @Action
     public void removeItem_FromShoppingCart() {
         // Update the SUT
