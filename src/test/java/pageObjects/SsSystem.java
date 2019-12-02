@@ -47,7 +47,7 @@ public class SsSystem {
     }
 
     public boolean isInShoppingCart() {
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver.findElement(By.className("PageTitle_Header1")).getText().contains("View Shopping Cart");
     }
 
@@ -84,9 +84,8 @@ public class SsSystem {
         driver.findElement(By.id("ctl00_MainContent_txt_Password")).sendKeys("what is the time69");
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.id("ctl00_MainContent_btn_Login")).click();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
-
     public void loggingOut() {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.className("BannerSideLink")).click();

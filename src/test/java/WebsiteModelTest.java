@@ -35,13 +35,13 @@ public class WebsiteModelTest {
         final Tester tester = new LookaheadTester(new WebsiteModel(driver));
 //        final Tester tester = new RandomTester(new WebsiteModel(driver));
         tester.setRandom(new Random());
-        tester.buildGraph();
+//        tester.buildGraph(); - keep turned off for LookaheadTester
         tester.addListener(new StopOnFailureListener());
         tester.addListener("verbose");
         tester.addCoverageMetric(new TransitionPairCoverage());
         tester.addCoverageMetric(new StateCoverage());
         tester.addCoverageMetric(new ActionCoverage());
-        tester.generate(500);
+        tester.generate(1000);
         tester.printCoverage();
     }
 }
