@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f8db5923-63a4-4eff-ad54-2022039ae416" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ssPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ssPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/ssStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WebsiteModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebsiteModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WebsiteModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebsiteModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/SsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SsPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/SsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SsSystem.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,16 +30,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/cps3230unittests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CPS3230UnitTesting" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
@@ -52,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Feature: simarkSupplies">
+  <component name="RunManager" selected="JUnit.WebsiteModelTest">
     <configuration name="Feature: simarkSupplies" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
@@ -71,15 +74,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Add multiple products to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Valid Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
       <option name="GLUE" value="stepDefs" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="CPS3230_Assignment_2" />
-      <option name="NAME_FILTER" value="^Add multiple products to cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Add multiple products to cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Add multiple products to cart" />
+      <option name="NAME_FILTER" value="^Valid Login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Valid Login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Valid Login" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -90,60 +93,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Add product to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="4" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
-      <option name="GLUE" value="stepDefs" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="CPS3230_Assignment_2" />
-      <option name="NAME_FILTER" value="^Add product to cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Add product to cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Add product to cart" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Removing a product from cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="4" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/simarkSupplies.feature" />
-      <option name="GLUE" value="stepDefs" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="CPS3230_Assignment_2" />
-      <option name="NAME_FILTER" value="^Removing a product from cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Removing a product from cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Removing a product from cart" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CucumberRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebsiteModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CPS3230_Assignment_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CucumberRunner" />
+      <option name="MAIN_CLASS_NAME" value="WebsiteModelTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebsiteModelTest.WebsiteModelTestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CPS3230_Assignment_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WebsiteModelTest" />
+      <option name="METHOD_NAME" value="WebsiteModelTestRunner" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebsiteModel.WebsiteModelTestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CPS3230_Assignment_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WebsiteModel" />
+      <option name="METHOD_NAME" value="WebsiteModelTestRunner" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebsiteModelTest" />
         <item itemvalue="Cucumber java.Feature: simarkSupplies" />
-        <item itemvalue="JUnit.CucumberRunner" />
-        <item itemvalue="Cucumber java.Scenario: Removing a product from cart" />
-        <item itemvalue="Cucumber java.Scenario: Add multiple products to cart" />
-        <item itemvalue="Cucumber java.Scenario: Add product to cart" />
+        <item itemvalue="Cucumber java.Scenario: Valid Login" />
+        <item itemvalue="JUnit.WebsiteModelTest.WebsiteModelTestRunner" />
+        <item itemvalue="JUnit.WebsiteModel.WebsiteModelTestRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -162,6 +147,15 @@
       <workItem from="1574268121422" duration="1840000" />
       <workItem from="1574323670396" duration="1243000" />
       <workItem from="1574408716011" duration="3119000" />
+      <workItem from="1574524618890" duration="14527000" />
+      <workItem from="1574591098635" duration="8140000" />
+      <workItem from="1574924135609" duration="5938000" />
+      <workItem from="1574951524702" duration="6057000" />
+      <workItem from="1574979402316" duration="1305000" />
+      <workItem from="1575011723811" duration="6374000" />
+      <workItem from="1575021624338" duration="4951000" />
+      <workItem from="1575044186900" duration="7509000" />
+      <workItem from="1575297622541" duration="6586000" />
     </task>
     <servers />
   </component>
