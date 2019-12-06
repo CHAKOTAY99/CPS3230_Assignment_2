@@ -7,9 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjects.SsSystem;
-
-import java.io.FileNotFoundException;
 import java.util.Random;
 
 public class WebsiteModelTest {

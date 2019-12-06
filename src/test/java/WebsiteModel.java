@@ -1,13 +1,10 @@
-import cucumber.api.java.en_old.Ac;
 import enums.WebsiteStates;
 import nz.ac.waikato.modeljunit.Action;
 import nz.ac.waikato.modeljunit.FsmModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pageObjects.SsSystem;
-
 import java.util.concurrent.TimeUnit;
-
 import static org.junit.Assert.*;
 
 public class WebsiteModel implements FsmModel {

@@ -3,10 +3,8 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import static org.junit.Assert.assertTrue;
 
 public class SsPageObject {
@@ -88,5 +86,4 @@ public class SsPageObject {
         buyProduct();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
-
 }
