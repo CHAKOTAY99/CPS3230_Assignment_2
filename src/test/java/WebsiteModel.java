@@ -66,7 +66,7 @@ public class WebsiteModel implements FsmModel {
 
     public boolean logoutUserGuard() {
         return systemUnderTest.isLoggedIn() && (getState().equals(WebsiteStates.LOGGED_IN_USER) || getState().equals(WebsiteStates.RESULT_LIST)
-        || getState().equals(WebsiteStates.SHOPPING_CART));
+        || getState().equals(WebsiteStates.SHOPPING_CART) || getState().equals(WebsiteStates.PRODUCT_DETAILS));
     }
     @Action
     public void logoutUser() {
